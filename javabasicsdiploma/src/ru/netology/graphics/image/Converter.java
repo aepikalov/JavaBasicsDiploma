@@ -91,13 +91,8 @@ public class Converter implements TextGraphicsConverter {
             if (height != 0) {
                 coeffH = img.getHeight() / height;
             } else coeffH = 1;
-            if (Math.min(coeffW, coeffH) == coeffH) {
-                newWidth = (int) (img.getWidth() / coeffW);
-                newHeight = (int) (img.getHeight() / coeffW);
-            } else {
-                newWidth = (int) (img.getWidth() / coeffH);
-                newHeight = (int) (img.getHeight() / coeffH);
-            }
+            newWidth = (int) (img.getWidth() / Math.max(coeffW, coeffH));
+            newHeight = (int) (img.getHeight() / Math.max(coeffW, coeffH));
         } else {
             newWidth = img.getWidth();
             newHeight = img.getHeight();
