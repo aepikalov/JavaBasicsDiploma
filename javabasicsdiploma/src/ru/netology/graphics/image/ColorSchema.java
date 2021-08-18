@@ -1,7 +1,7 @@
 package ru.netology.graphics.image;
 
 public class ColorSchema implements TextColorSchema {
-    final char[] C2 = {'#', '$', '@', '%', '*', '+', '-', '\''};
+    public static final char[] C2 = {'#', '$', '@', '%', '*', '+', '-', '\''};
 
     @Override
     public char convert(int color) {
